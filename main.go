@@ -12,25 +12,25 @@ package main
 
 import (
 	"fmt"
-	"github.com/892294101/mbm/src"
+	"github.com/892294101/mbm/bm"
 )
 
 func main() {
-	option := mbm.ParseOptions()
-	env := src.BackupEnv{}
+	option := bm.ParseOptions()
+	env := bm.BackupEnv{}
 	err := env.SetupBackupEnvironment(option)
 
 	if err != nil {
 		fmt.Printf("Can not setup program environment (%s)", err)
 	}
 
-	if env.Options.Operation == src.OpBackup {
+	if env.Options.Operation == bm.OpBackup {
 		env.PerformBackup()
-	} else if env.Options.Operation == src.OpRestore {
+	} else if env.Options.Operation == bm.OpRestore {
 		env.PerformRestore()
-	} else if env.Options.Operation == src.OpList {
+	} else if env.Options.Operation == bm.OpList {
 		env.List(env.Options.Kind)
-	} else if env.Options.Operation == src.OpDelete {
+	} else if env.Options.Operation == bm.OpDelete {
 		env.PerformDeletion()
 	}
 }

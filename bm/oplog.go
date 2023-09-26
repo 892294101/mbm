@@ -8,11 +8,12 @@
 ** Last update Mon  7 Mar 16:53:52 2016 gaspar_d
  */
 
-package src
+package bm
 
 import (
 	"github.com/892294101/mbm/utils"
 	"github.com/pierrec/lz4"
+	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 	"io"
 	"os"
@@ -74,7 +75,6 @@ func (e *BackupEnv) BackupOplogToDir(cursor *mgo.Iter, dir string) (error, float
 	for {
 		raw := &bson.Raw{}
 		next := cursor.Next(raw)
-
 		if !next {
 			// Record last entry saved
 			if lastRow.Data != nil {

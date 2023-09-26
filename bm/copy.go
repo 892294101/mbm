@@ -8,7 +8,7 @@
 ** Last update Mon  7 Mar 16:52:44 2016 gaspar_d
  */
 
-package src
+package bm
 
 import (
 	"github.com/892294101/mbm/utils"

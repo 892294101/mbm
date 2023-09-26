@@ -8,10 +8,12 @@
 ** Last update Mon  7 Mar 16:53:48 2016 gaspar_d
  */
 
-package src
+package bm
 
 import (
+	"errors"
 	"fmt"
+	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 	"os"
 )
@@ -19,6 +21,7 @@ import (
 // create mongoclient object
 func (e *BackupEnv) connectMongo() error {
 	var err error
+
 	e.mongo, err = mgo.Dial(e.Options.Mongohost + "?connect=direct")
 	if err != nil {
 		return errors.New(fmt.Sprintf("Can not connect to %s (%s)", e.Options.Mongohost, err))

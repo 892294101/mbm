@@ -8,10 +8,11 @@
 ** Last update Mon  7 Mar 16:52:59 2016 gaspar_d
  */
 
-package src
+package bm
 
 import (
 	"github.com/nightlyone/lockfile"
+	"gopkg.in/mgo.v2"
 	"io/ioutil"
 	"log"
 	"os"

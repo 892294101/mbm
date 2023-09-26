@@ -8,7 +8,7 @@
 ** Last update Mon  7 Mar 16:53:55 2016 gaspar_d
  */
 
-package src
+package bm
 
 import (
 	"fmt"

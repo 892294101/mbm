@@ -8,7 +8,7 @@
 ** Last update Mon  7 Mar 16:52:50 2016 gaspar_d
  */
 
-package src
+package bm
 
 import (
 	"errors"

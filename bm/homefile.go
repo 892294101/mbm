@@ -8,7 +8,7 @@
 ** Last update Mon  7 Mar 16:53:41 2016 gaspar_d
  */
 
-package src
+package bm
 
 import (
 	"encoding/json"
